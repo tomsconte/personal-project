@@ -59,10 +59,10 @@ function classGenerator() {
             document.getElementById('race').innerText = 'Race: ' + paladinClassRandomizer;
             break;
         case 'Warlock':
-            document.getElementById('race').innerText = 'Race: ' + paladinClassRandomizer;
+            document.getElementById('race').innerText = 'Race: ' + warlockClassRandomizer;
             break;
         case 'Warrior':
-            document.getElementById('race').innerText = 'Race: ' + paladinClassRandomizer;
+            document.getElementById('race').innerText = 'Race: ' + warriorClassRandomizer;
             break;
         default:
             console.log('Not Working');
@@ -130,7 +130,7 @@ function classGenerator() {
 //     demonHunter: ["night elf"],
 //     hunter: ["human", "night elf", "panderan", "draenei"]
 
-// };
+// 
 
 // const race = document.getElementById(".race");
 // const paragraphClass = document.getElementById(".class");
