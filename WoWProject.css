@@ -9,3 +9,39 @@ h1, h2, h3 {
     font-family: LifeCraft;
     letter-spacing: 3px;
 }
+
+body {
+    background-image: url("img/parchment.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+body>header>div.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body>header>div.header>img {
+    width: 756px;   
+}
+
+body>section.instructions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body>section.instructions>div>ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    border: solid 2px gold;
+    border-radius: 10px;
+    padding-right: 30px;
+    margin: 0%;
+}
