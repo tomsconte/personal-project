@@ -36,3 +36,26 @@ body>section.instructions>div>ol {
     padding-right: 30px;
     margin: 0%;
 }
+
+body>section.generator>div#user_info>div#image_div>img {
+    width: 150px;
+}
+
+body>table {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, rgb(0, 60, 255), rgb(202, 172, 0));
+    padding-right: 30px;
+    margin: 0%;
+}
+
+body>section#resources>div>ol {
+    list-style: none;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, rgb(0, 60, 255), rgb(202, 172, 0));
+    padding-right: 30px;
+    margin: 0%;
+}

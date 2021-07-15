@@ -45,16 +45,16 @@
         },
         gender: ["Male", "Female"],
         crest: {
-            "Death Knight": ["img/Death_Knight_Crest.webp"],
-            "Demon Hunter": ["img/demonHunterLogo.webp"],
-            "Druid": ["img/Druid_Crest.webp"],
-            "Hunter": ["img/Hunter_Crest.webp"],
-            "Mage": ["img/Mage_Crest.webp"],
-            "Paladin": ["img/Paladin_Crest.webp"],
-            "Priest": ["img/Priest_Crest.webp"],
-            "Rogue": ["img/Rogue_Crest.webp"],
-            "Warlock": ["img/Warlock_Crest.webp"],
-            "Warrior": ["img/Warrior_Crest.webp"]
+            "Death Knight": ["../img/Death_Knight_Crest.webp"],
+            "Demon Hunter": ["../img/demonHunterLogo.webp"],
+            "Druid": ["../img/Druid_Crest.webp"],
+            "Hunter": ["../img/Hunter_Crest.webp"],
+            "Mage": ["../img/Mage_Crest.webp"],
+            "Paladin": ["../img/Paladin_Crest.webp"],
+            "Priest": ["../img/Priest_Crest.webp"],
+            "Rogue": ["../img/Rogue_Crest.webp"],
+            "Warlock": ["../img/Warlock_Crest.webp"],
+            "Warrior": ["../img/Warrior_Crest.webp"]
         }
     };
 
@@ -67,47 +67,6 @@
         function _Select(obj, param) {
             let t = param ? obj[param] : obj;
             return t[Math.floor(Math.random() * t.length)];
-        }
-
-        function insertImage(parent) {
-            const imageContainer = document.createElement('div');
-            imageContainer.setAttribute('class', 'class_image')
-            
-            let crest = document.createElement('img');
-            crest.setAttribute('id', 'class_crest')
-            crest.style = "width='100px'"
-
-            switch (char.class) {
-                case "Death Knight":
-                    gId("faction").innerHTML = char.faction;
-                    gId("class_choice").innerHTML = char.class;
-                    if (gId("user_info").contains(gC("class_image"))) {
-                        removeDiv();
-                        crest.src = '../img/Death_knight_Crest.webp';
-                        imageContainer.appendChild(crest);
-                        parent.insertBefore(imageContainer, gId("race_choice"));
-                        gId("race_choice").innerHTML = char.race;
-                        gId("gender").innerHTML = char.gender;
-                    }
-                    else {
-                        crest.src = '../img/Death_knight_Crest.webp';
-                        imageContainer.appendChild(crest);
-                        parent.insertBefore(imageContainer, gId("race_choice"));
-                        gId("race_choice").innerHTML = char.race;
-                        gId("gender").innerHTML = char.gender;
-                    }
-                    break;
-                case "Demon Hunter":
-                    removeDiv();
-                    gId("faction").innerHTML = char.faction;
-                    gId("class_choice").innerHTML = char.class;
-                    crest.src = '../img/demonHunterLogo.webp';
-                    imageContainer.appendChild(crest);
-                    parent.insertBefore(imageContainer, gId("race_choice"));
-                    gId("race_choice").innerHTML = char.race;
-                    gId("gender").innerHTML = char.gender;
-                    break;
-            };
         }
 
         //empty object
@@ -126,16 +85,12 @@
         char.gender = _Select(races.gender, char.gender);
         char.crest = _Select(races.crest, char.class);
 
-        //Creating image element to house my crest logo
-
         //used to show the output
         gId("faction").innerHTML = char.faction;
         gId("class_choice").innerHTML = char.class;
         gId("race_choice").innerHTML = char.race;
         gId("gender").innerHTML = char.gender;
-        insertImage(gId("user_info"));
-
-
+        gId("image_crest").src = char.crest;
     };
 })();
 
