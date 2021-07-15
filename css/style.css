@@ -27,14 +27,14 @@ body>section.instructions {
     align-items: center;
 }
 
-body>section.instructions>div>ol {
-    list-style: none;
+body>section.instructions>div>p {
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, rgb(0, 60, 255), rgb(202, 172, 0));
     padding-right: 30px;
     margin: 0%;
+    width: 300px;
 }
 
 body>section.generator>div#user_info>div#image_div>img {
