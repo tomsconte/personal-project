@@ -14,8 +14,8 @@
     let races = {
         faction: ["Horde", "Alliance"],
         race: {
-            "Alliance": ["Dark Iron Dwarf", "Dwarf", "Gnome", "Human", "Night Elf", "Dranei", "Light-Forged Draenei", "Worgen", "Pandaren"],
-            "Horde": ["Orc", "Troll", "Tauren", "Undead", "Blood Elf", "Goblin", "Pandaren"]
+            "Alliance": ["Dark Iron Dwarf", "Dwarf", "Mechagnome", "Gnome", "Human", "Kul-Tiran Human", "Night Elf", "Void Elf", "Dranei", "Light-Forged Draenei", "Worgen", "Pandaren"],
+            "Horde": ["Orc", "Troll", "Tauren", "Undead", "Blood Elf", "Goblin", "Pandaren", "Vulpera", "Zandalari Troll", "Mag'har Orc", "Highmountain Tauren", "Nightborne"]
         },
         class: {
             "Human": ["Death Knight", "Hunter", "Mage", "Monk", "Paladin", "Priest", "Rogue", "Warlock", "Warrior"],
@@ -55,6 +55,35 @@
             "Rogue": ["../img/Rogue_Crest.webp"],
             "Warlock": ["../img/Warlock_Crest.webp"],
             "Warrior": ["../img/Warrior_Crest.webp"]
+        },
+        factionCrest: {
+            "Alliance": ['../img/Male.webp'],
+            "Horde": ['../img/Horde_Crest.webp']
+        },
+        raceCrest: {
+            "Human": ["../img/race_crest/Human_Crest.webp"],
+            "Dark Iron Dwarf": ["../img/race_crest/Dark_Iron_crest.webp"],
+            "Dwarf": ["../img/race_crest/Dwarf_Crest.webp"],
+            "Draenei": ["../img/race_crest/Draenei_Crest.webp"],
+            "Gnome": ["../img/race_crest/Gnome_Crest.webp"],
+            "Light-Forged Draenei": ["../img/race_crest/Lightforged_Draenei_Crest.webp"],
+            "Kul-Tiran Human": ["../img/race_crest/Kul_Tiran_crest.webp"],
+            "Mechagnome": ["../img/race_crest/Mechagnome.webp"],
+            "Night Elf": ["../img/race_crest/Night_Elf_Crest.webp"],
+            "Pandaren": ["../img/race_crest/Pandaren_Crest2.webp"],
+            "Worgen": ["../img/race_crest/Worgen-Icon.webp"],
+            "Void Elf": ["../img/race_crest/Void_Elves_crest.webp"],
+            "Blood Elf": ["../img/race_crest/Icon_of_Blood.webp"],
+            "Goblin": ["../img/race_crest/Goblin-Icon.webp"],
+            "Highmountain Tauren": ["../img/race_crest/Highmountain_Tauren_Crest.webp"],
+            "Mag'har Orc": ["../img/race_crest/Mag'har_crest.webp"],
+            "Nightborne": ["../img/race_crest/Nightborne_Crest.webp"],
+            "Orc": ["../img/race_crest/Orc_Crest.webp"],
+            "Tauren": ["../img/race_crest/Tauren_Crest.webp"],
+            "Troll": ["../img/race_crest/Troll_Crest.webp"],
+            "Undead": ["../img/race_crest/Forsaken_Crest.webp"],
+            "Vulpera": ["../img/race_crest/Vulpera_crest.webp"],
+            "Zandalari Troll": ["../img/race_crest/Zandalari_crest.webp"]
         }
     };
 
@@ -75,7 +104,9 @@
             class: "",
             race: "",
             gender: "",
-            crest: ""
+            crest: "",
+            factionCrest: "",
+            raceCrest: ""
         };
 
         //used to load the new, empty object
@@ -84,6 +115,8 @@
         char.class = _Select(races.class, char.race);
         char.gender = _Select(races.gender, char.gender);
         char.crest = _Select(races.crest, char.class);
+        char.factionCrest = _Select(races.factionCrest, char.faction)
+        char.raceCrest = _Select(races.raceCrest, char.race)
 
         //used to show the output
         gId("faction").innerHTML = char.faction;
@@ -91,6 +124,9 @@
         gId("race_choice").innerHTML = char.race;
         gId("gender").innerHTML = char.gender;
         gId("image_crest").src = char.crest;
+        gId("faction_crest").src = char.factionCrest;
+        gId("race_crest").src = char.raceCrest;
+
     };
 })();
 

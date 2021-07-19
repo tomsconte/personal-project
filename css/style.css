@@ -41,6 +41,14 @@ body>section.generator>div#user_info>div#image_div>img {
     width: 150px;
 }
 
+body>section.generator>div#user_info>div#faction_div>img {
+    width: 140px;
+}
+
+body>section.generator>div#user_info>div#race_div>img {
+    width: 120px;
+}
+
 body>table {
     border: 10px solid;
     border-image-slice: 1;
