@@ -1,0 +1,61 @@
+@font-face {
+    font-family: LifeCraft;
+    src: local("lifecraft font"),
+            local("lifecraft_font")
+            url('lifecraft_font-webfont.woff');
+}
+
+h1, h2, h3 {
+    font-family: LifeCraft;
+    letter-spacing: 3px;
+}
+
+body {
+    background-image: url("../img/parch.jpg");
+    background-position: fixed;
+    background-size: cover;
+}
+
+body>header>div.header>img {
+    width: 756px;   
+}
+
+body>section.instructions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body>section.instructions>div>p {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, rgb(0, 60, 255), rgb(202, 172, 0));
+    padding-right: 30px;
+    margin: 0%;
+    width: 300px;
+}
+
+body>section.generator>div#user_info>div#image_div>img {
+    width: 150px;
+}
+
+body>table {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, rgb(0, 60, 255), rgb(202, 172, 0));
+    padding-right: 30px;
+    margin: 0%;
+}
+
+body>section#resources>div>ol {
+    list-style: none;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, rgb(0, 60, 255), rgb(202, 172, 0));
+    padding-right: 30px;
+    margin: 0%;
+}

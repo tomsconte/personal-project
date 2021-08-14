@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/flex.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>World of Warcraft Character Customization Randomizer!</h1>
+            <img src="../img/WoWlogo.webp" alt="World of Warcraft Logo with a transparent background.">
+        </div>
+    </header>
+    <section class="instructions">
+        <h2>How it works:</h2>
+        <div>
+            <p>Looking below, please choose whether you want to get a random faction, side with the Alliance, or side with the Horde.  Next, click the submit button to input your selection. Log into World of Warcraft, create your character, and have fun!</p>
+        </div>
+    </section>
+    <section id="resources">
+        <h2>Resources:</h2>
+        <div>
+            <ol>
+                <li><a href="https://wow.gamepedia.com/Alliance">Alliance</a> via WoWPedia</li>
+                <li><a href="https://wow.gamepedia.com/Organization">List</a> of World of Warcraft Organizations</li>
+            </ol>
+        </div>
+    </section>
+    <!-- Houses all the information for the selector field and submit button -->
+    <div id="submit_button_container">
+        <select id="Factions">
+            <option value="Random">Random</option>
+            <option value="Alliance">Alliance</option>
+            <option value="Horde">Horde</option>
+        </select>
+        <button id="Submit">Submit</button>
+    </div>
+    <section class = "generator">
+        <div id="user_info">
+            <p id="faction"></p>
+            <div id = "image_div">
+                <p id="class_choice"></p>
+                <img id="image_crest" src="" alt="">
+            </div>
+            <p id="race_choice"></p>
+            <p id="gender"></p>
+        </div>
+    </section>
+    <script src="../javascript/randomizer_v2.js"></script>
+</body>
+
+</html>
