@@ -57,7 +57,7 @@
             "Warrior": ["../img/Warrior_Crest.webp"]
         },
         factionCrest: {
-            "Alliance": ['../img/Male.webp'],
+            "Alliance": ['../img/Alliance_Crest.webp'],
             "Horde": ['../img/Horde_Crest.webp']
         },
         raceCrest: {
